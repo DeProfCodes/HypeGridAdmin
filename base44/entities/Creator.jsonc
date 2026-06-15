@@ -1,0 +1,86 @@
+{
+  "name": "Creator",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "handle": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "TikTok",
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "WhatsApp",
+        "Other"
+      ]
+    },
+    "niche": {
+      "type": "string",
+      "enum": [
+        "Lifestyle",
+        "Music",
+        "Comedy",
+        "Fashion",
+        "Beauty",
+        "Business",
+        "Fitness",
+        "Food",
+        "Events",
+        "Tech",
+        "Other"
+      ]
+    },
+    "followers": {
+      "type": "number"
+    },
+    "city": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Applied",
+        "Under Review",
+        "Approved",
+        "Active",
+        "Suspended",
+        "Rejected",
+        "Archived"
+      ],
+      "default": "Applied"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "total_earned": {
+      "type": "number",
+      "default": 0
+    },
+    "total_paid": {
+      "type": "number",
+      "default": 0
+    },
+    "campaigns_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "full_name",
+    "email"
+  ]
+}

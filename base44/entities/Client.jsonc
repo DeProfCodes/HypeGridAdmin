@@ -1,0 +1,69 @@
+{
+  "name": "Client",
+  "type": "object",
+  "properties": {
+    "brand_name": {
+      "type": "string"
+    },
+    "contact_person": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "client_type": {
+      "type": "string",
+      "enum": [
+        "Business",
+        "Artist / Musician",
+        "Event Organizer",
+        "Startup / App",
+        "Product Brand",
+        "Personal Brand",
+        "Other"
+      ]
+    },
+    "industry": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Lead",
+        "Active",
+        "Inactive",
+        "VIP",
+        "Archived"
+      ],
+      "default": "Lead"
+    },
+    "website": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "total_spend": {
+      "type": "number",
+      "default": 0
+    },
+    "active_campaigns": {
+      "type": "number",
+      "default": 0
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "brand_name",
+    "contact_person",
+    "email"
+  ]
+}

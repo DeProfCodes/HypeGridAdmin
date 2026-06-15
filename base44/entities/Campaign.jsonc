@@ -1,0 +1,101 @@
+{
+  "name": "Campaign",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Campaign name"
+    },
+    "client_id": {
+      "type": "string",
+      "description": "Reference to client"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Business Promotion",
+        "Song / Music Release",
+        "Event Promotion",
+        "Product Promotion",
+        "App / Startup Launch",
+        "Influencer Campaign",
+        "Social Media Management",
+        "Other"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Requested",
+        "Quoted",
+        "Awaiting Payment",
+        "Approved",
+        "In Planning",
+        "Active",
+        "Content Pending",
+        "Client Review",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Draft"
+    },
+    "budget": {
+      "type": "number"
+    },
+    "progress": {
+      "type": "number",
+      "default": 0
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "manager": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "string"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "brief": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "Request Received",
+        "Quote Sent",
+        "Payment Confirmed",
+        "Strategy / Planning",
+        "Content Creation",
+        "Creator Activation",
+        "Campaign Live",
+        "Reporting",
+        "Completed"
+      ],
+      "default": "Request Received"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

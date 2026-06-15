@@ -1,0 +1,68 @@
+{
+  "name": "Deliverable",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "campaign_id": {
+      "type": "string"
+    },
+    "campaign_name": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "creator_id": {
+      "type": "string"
+    },
+    "creator_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Reel",
+        "TikTok Video",
+        "Instagram Post",
+        "Story",
+        "Flyer",
+        "Motion Graphic",
+        "Caption",
+        "Influencer Post",
+        "YouTube Short",
+        "Campaign Report"
+      ]
+    },
+    "platform": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Not Started",
+        "In Progress",
+        "Uploaded",
+        "Needs Changes",
+        "Approved",
+        "Posted",
+        "Rejected"
+      ],
+      "default": "Not Started"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

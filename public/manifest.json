@@ -1,0 +1,12 @@
+{
+  "name": "HypeGrid Admin Portal",
+  "short_name": "HypeGrid Admin",
+  "description": "HypeGrid admin portal for campaigns, clients, creators, and finances.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020512",
+  "theme_color": "#020512",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

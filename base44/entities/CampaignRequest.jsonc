@@ -1,0 +1,70 @@
+{
+  "name": "CampaignRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "brand_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "campaign_type": {
+      "type": "string",
+      "enum": [
+        "Business Promotion",
+        "Song / Music Release",
+        "Event Promotion",
+        "Product Promotion",
+        "App / Startup Launch",
+        "Influencer Campaign",
+        "Social Media Management",
+        "Other"
+      ]
+    },
+    "target_audience": {
+      "type": "string"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "budget_range": {
+      "type": "string"
+    },
+    "campaign_goal": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Contacted",
+        "Qualified",
+        "Quote Needed",
+        "Converted",
+        "Not Suitable",
+        "Closed"
+      ],
+      "default": "New"
+    },
+    "assigned_to": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "brand_name",
+    "email"
+  ]
+}

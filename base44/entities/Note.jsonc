@@ -1,0 +1,38 @@
+{
+  "name": "Note",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string"
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": [
+        "Campaign",
+        "Client",
+        "Creator",
+        "Internal"
+      ]
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "entity_name": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "Client-facing"
+      ],
+      "default": "Internal"
+    }
+  },
+  "required": [
+    "content"
+  ]
+}

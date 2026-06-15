@@ -1,0 +1,68 @@
+{
+  "name": "Quote",
+  "type": "object",
+  "properties": {
+    "quote_number": {
+      "type": "string"
+    },
+    "client_id": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "campaign_type": {
+      "type": "string"
+    },
+    "package_name": {
+      "type": "string",
+      "enum": [
+        "Starter Hype",
+        "Growth Hype",
+        "Premium Launch",
+        "Monthly Brand Management",
+        "Music Release Push",
+        "Custom Campaign"
+      ]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Sent",
+        "Accepted",
+        "Rejected",
+        "Expired",
+        "Converted to Invoice"
+      ],
+      "default": "Draft"
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "quote_number",
+    "client_name"
+  ]
+}
