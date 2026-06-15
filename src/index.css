@@ -12,7 +12,7 @@
     --card-foreground: 0 0% 100%;
     --popover: 230 60% 7%;
     --popover-foreground: 0 0% 100%;
-    --primary: 73 100% 50%;
+    --primary: 111 100% 54%;
     --primary-foreground: 228 82% 3%;
     --secondary: 187 100% 50%;
     --secondary-foreground: 228 82% 3%;
@@ -24,8 +24,8 @@
     --destructive-foreground: 0 0% 98%;
     --border: 231 32% 18%;
     --input: 230 28% 14%;
-    --ring: 73 100% 50%;
-    --chart-1: 73 100% 50%;
+    --ring: 111 100% 54%;
+    --chart-1: 111 100% 54%;
     --chart-2: 187 100% 50%;
     --chart-3: 231 60% 50%;
     --chart-4: 300 60% 50%;
@@ -37,12 +37,12 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --sidebar-background: 230 60% 7%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 73 100% 50%;
+    --sidebar-primary: 111 100% 54%;
     --sidebar-primary-foreground: 228 82% 3%;
     --sidebar-accent: 230 28% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 231 32% 18%;
-    --sidebar-ring: 73 100% 50%;
+    --sidebar-ring: 111 100% 54%;
   }
 
   .dark {
@@ -52,7 +52,7 @@
     --card-foreground: 0 0% 100%;
     --popover: 230 60% 7%;
     --popover-foreground: 0 0% 100%;
-    --primary: 73 100% 50%;
+    --primary: 111 100% 54%;
     --primary-foreground: 228 82% 3%;
     --secondary: 187 100% 50%;
     --secondary-foreground: 228 82% 3%;
@@ -64,20 +64,20 @@
     --destructive-foreground: 0 0% 98%;
     --border: 231 32% 18%;
     --input: 230 28% 14%;
-    --ring: 73 100% 50%;
-    --chart-1: 73 100% 50%;
+    --ring: 111 100% 54%;
+    --chart-1: 111 100% 54%;
     --chart-2: 187 100% 50%;
     --chart-3: 231 60% 50%;
     --chart-4: 300 60% 50%;
     --chart-5: 348 78% 55%;
     --sidebar-background: 230 60% 7%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 73 100% 50%;
+    --sidebar-primary: 111 100% 54%;
     --sidebar-primary-foreground: 228 82% 3%;
     --sidebar-accent: 230 28% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 231 32% 18%;
-    --sidebar-ring: 73 100% 50%;
+    --sidebar-ring: 111 100% 54%;
   }
 }
 
@@ -116,13 +116,13 @@
 
 /* Glow effects */
 .glow-green {
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.15), 0 0 40px rgba(204, 255, 0, 0.05);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.15), 0 0 40px rgba(57, 255, 20, 0.05);
 }
 .glow-cyan {
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.15), 0 0 40px rgba(0, 229, 255, 0.05);
 }
 .glow-green-sm {
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.1);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.1);
 }
 
 /* Glass card */

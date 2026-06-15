@@ -75,7 +75,7 @@ export default function AlertSubscribers() {
     { key: "consent_at", label: "Consent", render: (r) => fmtDate(r.consent_at) },
     { key: "channel_join_clicked", label: "Clicked", render: (r) => (
       r.channel_join_clicked
-        ? <span className="text-xs text-[#CCFF00]">Yes · {fmtDate(r.channel_join_clicked_at)}</span>
+        ? <span className="text-xs text-[#39FF14]">Yes · {fmtDate(r.channel_join_clicked_at)}</span>
         : <span className="text-xs text-muted-foreground">No</span>
     ) },
     { key: "status", label: "Status", render: (r) => <StatusBadge status={r.status} /> },

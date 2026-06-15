@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 export default function StatCard({ title, value, icon: Icon, trend, variant = "default" }) {
   const variants = {
     default: "border-border/60",
-    green: "border-[#CCFF00]/20 glow-green-sm",
+    green: "border-[#39FF14]/20 glow-green-sm",
     cyan: "border-[#00E5FF]/20 glow-cyan",
     purple: "border-violet-500/20",
     red: "border-red-500/20",
@@ -11,7 +11,7 @@ export default function StatCard({ title, value, icon: Icon, trend, variant = "d
 
   const iconVariants = {
     default: "bg-muted text-muted-foreground",
-    green: "bg-[#CCFF00]/10 text-[#CCFF00]",
+    green: "bg-[#39FF14]/10 text-[#39FF14]",
     cyan: "bg-[#00E5FF]/10 text-[#00E5FF]",
     purple: "bg-violet-500/10 text-violet-400",
     red: "bg-red-500/10 text-red-400",

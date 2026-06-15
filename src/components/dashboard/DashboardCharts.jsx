@@ -1,6 +1,6 @@
 import { BarChart, Bar, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
-const COLORS = ["#CCFF00", "#00E5FF", "#334CCC", "#CC33CC", "#E23670", "#94A3B8"];
+const COLORS = ["#39FF14", "#00E5FF", "#334CCC", "#CC33CC", "#E23670", "#94A3B8"];
 
 export default function DashboardCharts({ campaigns, invoices, deliverables }) {
   // Campaigns by status
@@ -68,7 +68,7 @@ export default function DashboardCharts({ campaigns, invoices, deliverables }) {
             <XAxis type="number" tick={{ fill: "#94A3B8", fontSize: 10 }} />
             <YAxis type="category" dataKey="name" width={100} tick={{ fill: "#94A3B8", fontSize: 10 }} />
             <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="value" fill="#CCFF00" radius={[0, 4, 4, 0]} barSize={16} />
+            <Bar dataKey="value" fill="#39FF14" radius={[0, 4, 4, 0]} barSize={16} />
           </BarChart>
         </ResponsiveContainer>
       </div>

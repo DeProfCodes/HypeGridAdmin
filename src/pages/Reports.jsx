@@ -4,7 +4,7 @@ import { BarChart3, Megaphone, CheckCircle, DollarSign, Users, FileCheck } from 
 import StatCard from "@/components/ui/StatCard";
 import { BarChart, Bar, PieChart, Pie, Cell, LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 
-const COLORS = ["#CCFF00", "#00E5FF", "#334CCC", "#CC33CC", "#E23670", "#94A3B8"];
+const COLORS = ["#39FF14", "#00E5FF", "#334CCC", "#CC33CC", "#E23670", "#94A3B8"];
 
 export default function Reports() {
   const { data: campaigns = [] } = useQuery({ queryKey: ["campaigns"], queryFn: () => hypegrid.entities.Campaign.list() });
@@ -62,7 +62,7 @@ export default function Reports() {
               <XAxis dataKey="name" tick={{ fill: "#94A3B8", fontSize: 9 }} angle={-20} textAnchor="end" height={60} />
               <YAxis tick={{ fill: "#94A3B8", fontSize: 10 }} />
               <Tooltip content={<CustomTooltip />} />
-              <Bar dataKey="value" fill="#CCFF00" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="value" fill="#39FF14" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
