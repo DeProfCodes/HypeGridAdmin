@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import ImageUploadField from "@/components/marketing/ImageUploadField";
 
 // Accepts watch?v=, youtu.be/, embed/ and bare ids.
 export function youTubeId(url) {
@@ -70,7 +71,7 @@ export default function FeaturedVideoPage() {
           <div className="space-y-1.5"><Label>Title</Label><Input value={form.title} onChange={(e) => set("title", e.target.value)} required /></div>
           <div className="space-y-1.5"><Label>Subtitle</Label><Textarea rows={2} value={form.subtitle} onChange={(e) => set("subtitle", e.target.value)} /></div>
           <div className="space-y-1.5"><Label>YouTube URL</Label><Input value={form.you_tube_url} onChange={(e) => set("you_tube_url", e.target.value)} placeholder="https://www.youtube.com/watch?v=…" required /></div>
-          <div className="space-y-1.5"><Label>Thumbnail URL (optional)</Label><Input value={form.thumbnail_url} onChange={(e) => set("thumbnail_url", e.target.value)} /></div>
+          <ImageUploadField label="Thumbnail" recommended="1280×720 · optional" category="featured-video" value={form.thumbnail_url} onChange={(url) => set("thumbnail_url", url)} />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1.5"><Label>CTA text</Label><Input value={form.cta_text} onChange={(e) => set("cta_text", e.target.value)} /></div>
             <div className="space-y-1.5"><Label>CTA URL</Label><Input value={form.cta_url} onChange={(e) => set("cta_url", e.target.value)} /></div>

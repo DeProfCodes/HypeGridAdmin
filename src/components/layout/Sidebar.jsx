@@ -1,9 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import BrandLogo from "@/components/brand/BrandLogo";
 import {
   LayoutDashboard, Megaphone, Inbox, Users, Palette, FileCheck,
   Calendar, FileText, CreditCard, Wallet, BarChart3, UsersRound,
-  Settings, X, Briefcase, ChevronLeft, Images, Tag, Video, Activity
+  Settings, X, Briefcase, ChevronLeft, Images, Tag, Video, Activity, BellRing
 } from "lucide-react";
 
 const adminNav = [
@@ -23,6 +24,7 @@ const adminNav = [
   { label: "Deals & Specials", path: "/deals", icon: Tag },
   { label: "Featured Video", path: "/featured-video", icon: Video },
   { label: "Placement Analytics", path: "/placement-analytics", icon: Activity },
+  { label: "Alerts", path: "/alerts", icon: BellRing },
   { section: "Admin" },
   { label: "Team", path: "/team", icon: UsersRound },
   { label: "Settings", path: "/settings", icon: Settings },
@@ -67,12 +69,9 @@ export default function Sidebar({ isOpen, onClose, userRole = "admin" }) {
       )}>
         {/* Logo area */}
         <div className="p-5 flex items-center justify-between border-b border-sidebar-border">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-black text-sm font-display">H</span>
-            </div>
-            <span className="text-lg font-bold font-display text-foreground tracking-tight">HypeGrid</span>
-          </div>
+          <Link to="/" className="flex items-center">
+            <BrandLogo className="w-[150px] h-auto" />
+          </Link>
           <button onClick={onClose} className="lg:hidden text-muted-foreground hover:text-foreground">
             <X className="w-5 h-5" />
           </button>

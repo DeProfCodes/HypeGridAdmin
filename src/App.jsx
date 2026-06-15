@@ -6,6 +6,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import BrandLogo from '@/components/brand/BrandLogo';
 
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
@@ -34,6 +35,7 @@ import HeroAds from '@/pages/HeroAds';
 import Deals from '@/pages/Deals';
 import FeaturedVideoPage from '@/pages/FeaturedVideoPage';
 import PlacementAnalytics from '@/pages/PlacementAnalytics';
+import AlertSubscribers from '@/pages/AlertSubscribers';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -42,9 +44,7 @@ const AuthenticatedApp = () => {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-background grid-bg">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-black text-lg font-display">H</span>
-          </div>
+          <BrandLogo iconOnly className="w-12 h-12" />
           <div className="w-8 h-8 border-2 border-muted border-t-primary rounded-full animate-spin" />
         </div>
       </div>
@@ -87,6 +87,7 @@ const AuthenticatedApp = () => {
           <Route path="/deals" element={<Deals />} />
           <Route path="/featured-video" element={<FeaturedVideoPage />} />
           <Route path="/placement-analytics" element={<PlacementAnalytics />} />
+          <Route path="/alerts" element={<AlertSubscribers />} />
           <Route path="/team" element={<Team />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/messages" element={<Messages />} />

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LogIn, Mail, Lock, Loader2, Sparkles } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
+import { SocialLinks } from "@/components/ui/SocialIcons";
 
 export default function Login() {
   const { login, loginDemo } = useAuth();
@@ -48,9 +49,15 @@ export default function Login() {
       title="Welcome back"
       subtitle="Log in to your account"
       footer={
-        <span className="text-muted-foreground">
-          Team accounts are created by an administrator. Contact your HypeGrid admin for access.
-        </span>
+        <div className="space-y-4">
+          <span className="text-muted-foreground block">
+            Team accounts are created by an administrator. Contact your HypeGrid admin for access.
+          </span>
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground/70">Follow HypeGrid</span>
+            <SocialLinks variant="neutral" />
+          </div>
+        </div>
       }
     >
       <Button

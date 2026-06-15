@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ImageUploadField from "@/components/marketing/ImageUploadField";
 
 const categories = ["Food", "Grocery", "Fashion", "Beauty", "Tech", "Mobile", "Home", "Events", "Music", "Travel", "Services", "Apps", "Other"];
 
@@ -71,8 +72,8 @@ export default function DealFormDialog({ open, onOpenChange, deal, onSubmit, isL
             </div>
             <div className="col-span-2 space-y-1.5"><Label>Short description</Label><Textarea rows={2} value={form.short_description} onChange={(e) => set("short_description", e.target.value)} /></div>
             <div className="col-span-2 space-y-1.5"><Label>Full description</Label><Textarea rows={3} value={form.full_description} onChange={(e) => set("full_description", e.target.value)} /></div>
-            <div className="space-y-1.5"><Label>Image URL</Label><Input value={form.image_url} onChange={(e) => set("image_url", e.target.value)} placeholder="https://…" /></div>
-            <div className="space-y-1.5"><Label>Mobile image URL</Label><Input value={form.mobile_image_url} onChange={(e) => set("mobile_image_url", e.target.value)} placeholder="Optional" /></div>
+            <div className="col-span-2"><ImageUploadField label="Image" recommended="1200×800 or 1080×1080" category="deal" value={form.image_url} onChange={(url) => set("image_url", url)} /></div>
+            <div className="col-span-2"><ImageUploadField label="Mobile image" recommended="optional" category="deal" value={form.mobile_image_url} onChange={(url) => set("mobile_image_url", url)} /></div>
             <div className="space-y-1.5"><Label>Original price (R)</Label><Input type="number" step="0.01" value={form.original_price} onChange={(e) => set("original_price", e.target.value)} /></div>
             <div className="space-y-1.5"><Label>Deal price (R)</Label><Input type="number" step="0.01" value={form.deal_price} onChange={(e) => set("deal_price", e.target.value)} /></div>
             <div className="space-y-1.5"><Label>Discount label</Label><Input value={form.discount_label} onChange={(e) => set("discount_label", e.target.value)} placeholder="Save 30%" /></div>

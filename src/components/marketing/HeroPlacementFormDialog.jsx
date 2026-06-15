@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ImageUploadField from "@/components/marketing/ImageUploadField";
 
 const targetTypes = ["internal", "external", "whatsapp", "deal", "campaign"];
 
@@ -61,8 +62,8 @@ export default function HeroPlacementFormDialog({ open, onOpenChange, placement,
             <div className="col-span-2 space-y-1.5"><Label>Subtitle</Label><Textarea rows={2} value={form.subtitle} onChange={(e) => set("subtitle", e.target.value)} /></div>
             <div className="space-y-1.5"><Label>Badge / Category</Label><Input value={form.badge} onChange={(e) => set("badge", e.target.value)} placeholder="Featured" /></div>
             <div className="space-y-1.5"><Label>Sponsor / Brand</Label><Input value={form.sponsor_name} onChange={(e) => set("sponsor_name", e.target.value)} placeholder="Optional" /></div>
-            <div className="col-span-2 space-y-1.5"><Label>Desktop image URL <span className="text-muted-foreground">(1920×1080)</span></Label><Input value={form.desktop_image_url} onChange={(e) => set("desktop_image_url", e.target.value)} placeholder="https://…" /></div>
-            <div className="col-span-2 space-y-1.5"><Label>Mobile image URL <span className="text-muted-foreground">(1080×1920, optional)</span></Label><Input value={form.mobile_image_url} onChange={(e) => set("mobile_image_url", e.target.value)} placeholder="Falls back to desktop" /></div>
+            <div className="col-span-2"><ImageUploadField label="Desktop image" recommended="1920×1080" category="hero-desktop" value={form.desktop_image_url} onChange={(url) => set("desktop_image_url", url)} /></div>
+            <div className="col-span-2"><ImageUploadField label="Mobile image" recommended="1080×1920 · optional, falls back to desktop" category="hero-mobile" value={form.mobile_image_url} onChange={(url) => set("mobile_image_url", url)} /></div>
             <div className="space-y-1.5"><Label>CTA text</Label><Input value={form.cta_text} onChange={(e) => set("cta_text", e.target.value)} placeholder="Explore" /></div>
             <div className="space-y-1.5"><Label>CTA URL</Label><Input value={form.cta_url} onChange={(e) => set("cta_url", e.target.value)} placeholder="/deals or https://…" /></div>
             <div className="space-y-1.5"><Label>CTA target</Label>
